@@ -49,4 +49,9 @@ public class ServiceImp implements IService {
     public List<Stage> getAllStages() {
         return stageRepo.findAll();
     }
+
+    @Override
+    public List<Stage> searchByTitle(String title) {
+        return stageRepo.findByTitleContainingIgnoreCase(title);
+    }
 }

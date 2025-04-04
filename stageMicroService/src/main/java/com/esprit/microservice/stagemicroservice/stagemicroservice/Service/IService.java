@@ -9,4 +9,6 @@ public interface IService {
     void deleteStage(Long id);
     Stage getStageById(Long id);
     List<Stage> getAllStages();
+    List<Stage> searchByTitle(String title);
+
 }

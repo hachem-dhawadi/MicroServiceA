@@ -39,4 +39,10 @@ public class RestControllerMicro {
     public List<Stage> getAllStages() {
         return stageService.getAllStages();
     }
+
+    @GetMapping("/search")
+    public List<Stage> searchStages(@RequestParam String title) {
+        return stageService.searchByTitle(title);
+    }
+
 }
